@@ -1,0 +1,54 @@
+site_name: Arkeo Multichannel API Documentation (v0.4.2)
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.instant
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: false
+      linenums: false
+      guess_lang: false
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+nav:
+  - Introduction: index.md
+  - MAIN Commands: main.md
+  - ROUTINE Commands:
+      - Overview: routine/index.md
+      - Connection Test: routine/connection_test.md
+      - JV Routine: routine/jv.md
+      - IPCE Routine: routine/ipce.md
+      - Resistivity Routine: routine/resistivity.md
+      - Luminescence Routine: routine/luminescence.md
+      - Transient Photo Response Routine: routine/TPR.md
+      - Impedance Routine: routine/impedance.md
+  - TMPCTL Commands: tmpctl.md
+  - MUX Commands: mux.md
+  - Examples:
+      - Python Example: examples/python.md
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+  - js/katex-init.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+  - assets/stylesheets/extra.css
