@@ -1,2 +1,2 @@
-cd C:\arkeo-api-docs
+cd C:\arkeo-multichannel-api-docs
 mkdocs serve

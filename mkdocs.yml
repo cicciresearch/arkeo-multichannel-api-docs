@@ -11,6 +11,7 @@ theme:
     - search.suggest
     - content.code.annotate
     - content.code.copy
+    - versioning  # REQUIRED for mike
 
 markdown_extensions:
   - toc:
@@ -20,8 +21,9 @@ markdown_extensions:
       anchor_linenums: false
       linenums: false
       guess_lang: false
-  - pymdownx.superfences
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - attr_list
   - md_in_html
   - pymdownx.arithmatex:
@@ -29,20 +31,12 @@ markdown_extensions:
 
 nav:
   - Introduction: index.md
-  - MAIN Commands: main.md
-  - ROUTINE Commands:
-      - Overview: routine/index.md
-      - Connection Test: routine/connection_test.md
-      - JV Routine: routine/jv.md
-      - IPCE Routine: routine/ipce.md
-      - Resistivity Routine: routine/resistivity.md
-      - Luminescence Routine: routine/luminescence.md
-      - Transient Photo Response Routine: routine/TPR.md
-      - Impedance Routine: routine/impedance.md
-  - TMPCTL Commands: tmpctl.md
-  - MUX Commands: mux.md
-  - Examples:
-      - Python Example: examples/python.md
+  - Commands: commands.md
+  - Configuration JSONs:
+    - Settings: jsons/settings-json.md
+    - State: jsons/state-json.md
+    - Sensors: jsons/sensor-json.md
+    - Enviroments: jsons/environment-json.md
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
@@ -52,3 +46,7 @@ extra_javascript:
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
   - assets/stylesheets/extra.css
+
+extra:
+  version:
+    provider: mike
