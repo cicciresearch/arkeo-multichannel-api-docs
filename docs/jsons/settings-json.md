@@ -40,6 +40,17 @@ Below is an example of a channel settings string.
     "NrW cells":1,
     "W-cellArea (cm2)":1
   },
+  "Day-Night":{
+    "Use Global":false,
+    "Settings":{
+      "enable":true,
+      "sensor":2,
+      "threshold_value":50,
+      "threshold_duration":5,
+      "night_algorithm":"Open circuit",
+      "night_jv":false
+    }
+  },
   "Light":{"Irradiance":100,"Unit":"mW/cm2"},
   "Note":""
 }
@@ -123,6 +134,20 @@ Below is an example of a channel settings string.
     - `1`: Parallel Module  
     - `2`: Z Module  
     - `3`: W Module   
+
+## **Day-Night** (object)
+
+| **Parameter**      | **Description**                 | **Example**  | **Unit** | **Type** |
+| ------------------ | ------------------------------- | ------------ | -------- | -------- |
+| Use Global         | Use the global settings         | false        | —        | boolean  |
+| enable             | Enable the day-night cycling    | true         | —        | boolean  |
+| sensor             | Channel of the sensor           | 1            | —        | integer  |
+| threshold_value    | Threshold between day and night | 50           | —        | float    |
+| threshold_duration | Delay after threshold is reach  | 5            | min      | float    |
+| night_algorithm    | Algorithm during night time     | Open-circuit | —        | string   |
+| night_jv           | Perform JV during night time    | false        | —        | boolean  |
+???+ Note
+	The settings object is ignore if the "Use Global" is enabled
 ## **Note**
 
 | Parameter | Description                    | Example | Unit | Type   |

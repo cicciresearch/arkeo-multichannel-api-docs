@@ -192,3 +192,57 @@ Associate a channel to an environment
 ```json
 OK
 ```
+
+---
+### **GetGlobalDayNight**
+**Description**
+Returns the global day-night cycling values and settings
+
+**Example Request**
+``` json
+{"command": "GetGlobalDayNight"}
+```
+**Example Response**
+```json
+{
+  "Day Night":{
+    "isDay":true,
+    "DelayTimer":"1904-01-01T00:00:00.000Z",
+    "Elapsed Time (s)":0,
+    "Sensor Value":0
+  },
+  "Settings":{
+    "enable":false,
+    "sensor":0,
+    "threshold_value":0,
+    "threshold_duration":0,
+    "night_algorithm":"Open circuit",
+    "night_jv":false
+  }
+}
+```
+
+---
+### **SetGlobalDayNight**
+**Description**
+Set the global day-night cycling settings
+
+**Example Request**
+``` json
+{"command": "GetSensorsInfo",
+ "parameter": {
+	"settings": {
+		"enable":false,
+		"sensor":0,
+		"threshold_value":0,
+		"threshold_duration":0,
+		"night_algorithm":"Open circuit",
+		"night_jv":false
+	}
+  }
+}
+```
+**Example Response**
+```json
+OK
+```

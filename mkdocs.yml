@@ -38,6 +38,9 @@ nav:
     - State: jsons/state-json.md
     - Sensors: jsons/sensor-json.md
     - Enviroments: jsons/environment-json.md
+  - Examples:
+    - Python: examples/python.md
+  - Changelog: changelog.md
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
@@ -48,6 +51,6 @@ extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
   - assets/stylesheets/extra.css
 
-extra:
-  version:
-    provider: mike
+# extra:
+  # version:
+    # provider: mike
