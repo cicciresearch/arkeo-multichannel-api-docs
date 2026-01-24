@@ -24,7 +24,7 @@ If you are new to the API, follow this recommended path:
     
     Learn how commands and responses are exchanged, including message framing and transport rules.
     
-    [:octicons-arrow-right-24: Protocol overview](api/protocol.md)
+    [:octicons-arrow-right-24: Protocol overview]
 
 -   :material-console-line: **Commands**
     
@@ -40,7 +40,7 @@ If you are new to the API, follow this recommended path:
     
     Understand how channels, sensors, and settings are represented in JSON.
     
-    [:octicons-arrow-right-24: JSON objects](jsons/index.md)
+    [:octicons-arrow-right-24: JSON objects]
 
 </div>
 ---
