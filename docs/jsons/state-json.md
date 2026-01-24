@@ -1,27 +1,29 @@
 # The JSON state string
 
-The state of a channel is represented in a JSON string. This string is read-only and is obtained using the **Command: GetChannelState**.
+The state of a channel is represented in a JSON string. This string is read-only and is obtained using the [GetChannelState](../commands/device.md#getchannelstate) command.
 
 Below is an example of a state string. 
 ```json
 {
-	"Enable":false,
-	"Channel":0,
-	"User":"User",
-	"Measurement":"JV",
-	"Direction":"Forward",
-	"State":"Running",
+	"index":0,
+	"enable":false,
+	"user":"Cicci Research",
+	"device":"Sample",
+	"measurement":"jv",
+	"direction":"forward",
+	"state":"running"
 }
 ```
 
 **Description**
 
 
-| **Parameter** | **Description**                                                                                                                                       | **Example** | **Data Type** |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------- |
-| Enable        | Enables or disables the channel                                                                                                                       | true        | Boolean       |
-| Channel       | ID of the channel                                                                                                                                     | 0           | Integer       |
-| User          | Name of the user                                                                                                                                      | User        | String        |
-| Measurement   | State of the Measurement                                                                                                                              | JV          | String        |
-| Direction     | Current direction of the JV                                                                                                                           | Forward     | String        |
-| State         | Current state of the channel<br>-        Idle<br>-        Ready to start<br>-        Running<br>-        Paused<br>-        Stopped<br>-        Error | Running     | String        |
+| **Parameter** | **Description**  | **Example** | **Data Type** |
+| ------------- | ------------------------- | ----------- | ------------- |
+| index         | Channel index | 0           | Integer       |
+| enable        | If channel is enabled | true        | Boolean       |
+| user          | Name of the user  | User        | String        |
+| device        | Name of the device  | Sample        | String        |
+| masurement    | State of the Measurement  | jv          | String        |
+| direction     | Current direction of the JV | forward     | String        |
+| state         | Current state of the channel<br>- idle<br>- ready to start<br>- running<br>- stopped<br>- error | running  | String |

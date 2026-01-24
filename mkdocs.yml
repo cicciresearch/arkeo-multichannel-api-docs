@@ -1,4 +1,4 @@
-site_name: Arkeo Multichannel API Documentation (v0.4.3)
+site_name: Arkeo Multichannel API Documentation (v0.5.0)
 
 theme:
   name: material
@@ -11,6 +11,7 @@ theme:
     - search.suggest
     - content.code.annotate
     - content.code.copy
+    - content.icons
     - versioning  # REQUIRED for mike
 
 
@@ -29,10 +30,18 @@ markdown_extensions:
   - md_in_html
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Introduction: index.md
-  - Commands: commands.md
+  - Commands:
+      - Overview: commands/index.md
+      - Device Commands: commands/device.md
+      - Sensor Commands: commands/sensors.md
+      - Environment Commands: commands/environments.md
+      - Day-Night Commands: commands/day-night.md
   - Configuration JSONs:
     - Settings: jsons/settings-json.md
     - State: jsons/state-json.md
@@ -51,6 +60,6 @@ extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
   - assets/stylesheets/extra.css
 
-# extra:
-  # version:
-    # provider: mike
+extra:
+  version:
+     provider: mike

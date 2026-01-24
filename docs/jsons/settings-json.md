@@ -1,6 +1,6 @@
 # JSON Settings string
 
-The settings of a channel are represented in a JSON string. When using [SetChannelSettings](../commands.md#setchannelsettings), this is value that the software expects. It is recommended to use [GetChannelSettings](../commands.md#getchannelsettings) to read the actual settings and modify those settings.
+The settings of a channel are represented in a JSON string. When using [SetChannelSettings](../commands/device.md#setchannelsettings), this is value that the software expects. It is recommended to use [GetChannelSettings](../commands/device.md#getchannelsettings) to read the actual settings and modify those settings.
 
 Below is an example of a channel settings string. 
 

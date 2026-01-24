@@ -1,28 +1,87 @@
-# Introduction
+# ARKEO Multichannel API
 
-This API facilitates remote control of the Arkeo Multichannel using TCP on port ```6340```, enabling users to perform a variety of commands manage measurements.
+Welcome to the **ARKEO Multichannel API documentation**.
 
-A command must sent as a JSON string in the form  
-```json
-{'command': command, 'parameter': parameter}
-```
+This API allows programmatic control of the ARKEO multichannel measurement platform, including device channels, sensors, environments, and automation logic.
 
-Each command must be preceded by a 4-byte integer indicating the total length of the command. After each command, a reply is always sent back. Its format depends on the command (see list below). If an unknown command is sent, the string “Not a valid command” is send instead.
+The documentation is organized to help you:
+
+- understand the API structure
+- discover available commands
+- integrate a client step by step
 
 ---
-# Summary of available commands
-| **Command**                                                | **Description**                                                 |
-| ---------------------------------------------------------- | --------------------------------------------------------------- |
-| [SetActiveChannel](commands.md#setactivechannel)           | Set the channel upon which all subsequent actions are performed |
-| [GetActiveChannel](commands.md#getactivechannel)           | Get the active channel                                          |
-| [SetChannelSettings](commands.md#setchannelsettings)       | Modify the settings                                             |
-| [GetChannelSettings](commands.md#getchannelsettings)       | Retrieve the settings                                           |
-| [StartChannel](commands.md#startchannel)                   | Start measurement                                               |
-| [StopChannel](commands.md#stopchannel)                     | Stop the measurement process                                    |
-| [ForceJV](commands.md#forcejv)                             | Force a JV measurement                                          |
-| [GetChannelState](commands.md#getchannelstate)             | Retrieve the current state                                      |
-| [GetLatestJV](commands.md#getlatestjv)                     | Get the voltage and current of last performed JV                |
-| [GetIV](commands.md#getiv)                                 | Get the live voltage and current of all channels                |
-| [GetSensorsInfo](commands.md#getsensorsinfo)               | Retrieve sensor configuration                                   |
-| [GetSensors](commands.md#getsensors)                       | Get the live sensor values of all connected sensors             |
-| [SetChannelEnvironment](commands.md#setchannelenvironment) | Associate a channel to an environment                           |
+
+## Getting started
+
+If you are new to the API, follow this recommended path:
+
+<div class="grid cards" markdown>
+
+-   :material-swap-horizontal: **Protocol**
+    
+    ---
+    
+    Learn how commands and responses are exchanged, including message framing and transport rules.
+    
+    [:octicons-arrow-right-24: Protocol overview](api/protocol.md)
+
+-   :material-console-line: **Commands**
+    
+    ---
+    
+    Explore all available commands, grouped by functional domain.
+    
+    [:octicons-arrow-right-24: Commands overview](commands/index.md)
+
+-   :material-code-json: **JSON Objects**
+    
+    ---
+    
+    Understand how channels, sensors, and settings are represented in JSON.
+    
+    [:octicons-arrow-right-24: JSON objects](jsons/index.md)
+
+</div>
+---
+
+## API structure at a glance
+
+The API is organized around **domains**, each with a clear responsibility and response structure:
+
+| Domain | Purpose |
+|------|--------|
+| Device | Measurement channels and electrical control |
+| Sensors | Physical and virtual sensors |
+| Environments | Logical grouping of sensors |
+| Day–Night | Automation and cycling logic |
+
+Each domain is documented separately and can be used independently.
+
+---
+
+## Who this documentation is for
+
+This documentation is intended for:
+
+- client developers (Python, LabVIEW, C++, etc.)
+- system integrators
+- advanced users automating measurements
+
+It focuses on **clarity, consistency, and explicit behavior** rather than tutorials or examples tied to a specific language.
+
+---
+
+## Looking for something specific?
+
+- Want to control measurements? → **Device commands**
+- Need sensor values? → **Sensor commands**
+- Working with automation? → **Day–Night**
+- Integrating metadata? → **JSON objects**
+
+Use the navigation menu on the left to jump directly to the relevant section.
+
+---
+
+!!! note
+    This documentation describes the API behavior, not a specific client implementation.
