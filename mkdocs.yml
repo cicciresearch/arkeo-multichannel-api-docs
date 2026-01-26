@@ -45,7 +45,8 @@ nav:
     - Settings: jsons/settings-json.md
     - State: jsons/state-json.md
     - Sensors: jsons/sensor-json.md
-    - Enviroments: jsons/environment-json.md
+    - Environments: jsons/environment-json.md
+    - JV Scan: jsons/jv-json.md
   - Examples:
     - Python: examples/python.md
   - Changelog: changelog.md

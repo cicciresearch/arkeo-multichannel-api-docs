@@ -6,7 +6,7 @@ Sensors are:
 
 - globally defined
 - uniquely identified by a `channel` index
-- referenced by other API components (environments, day–night logic)
+- referenced by other API components (environments, day-night logic)
 
 ---
 
@@ -97,7 +97,7 @@ This index is used consistently across the API:
 | Sensor configuration | `common.channel` |
 | Live sensor data | `GetSensorsData → sensors[][0]` |
 | Environments | `sensor_channels[]` |
-| Day–Night logic | `sensor` |
+| Day-Night logic | `sensor` |
 
 ---
 

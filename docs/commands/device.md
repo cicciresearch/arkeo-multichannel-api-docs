@@ -186,12 +186,11 @@ Retrieve the voltage and current values of the latest JV measurement.
 
 **Example Request**
 ``` json
-{"command": "GetLatestJV", "parameter": { } }
+{"command": "GetLatestJV" }
 ```
 **Example Response**
 
-    v_fw1|j_fw1|...|v_fwn|j_fwn||v_rv1|j_rv1|...|v_rvn|j_rvn
-
+[`JV JSON object`](../jsons/jv-json.md)
 
 ---
 ### **GetIV**
