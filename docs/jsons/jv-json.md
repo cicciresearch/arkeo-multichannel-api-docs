@@ -1,15 +1,5 @@
 The [`GetLatestJV`](../commands/device.md#getlatestjv) command retrieves the latest JV scan acquired from the device under test, together with derived photovoltaic parameters.
 
----
-
-## Request
-
-```json
-{ "command": "GetLatestJV" }
-```
-
----
-
 ## Response structure
 
 ```json

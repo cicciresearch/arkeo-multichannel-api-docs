@@ -22,6 +22,7 @@ markdown_extensions:
       anchor_linenums: false
       linenums: false
       guess_lang: false
+  - pymdownx.inlinehilite
   - admonition
   - pymdownx.details
   - pymdownx.superfences
@@ -35,6 +36,8 @@ markdown_extensions:
 
 nav:
   - Introduction: index.md
+  - Protocol: protocol.md
+  - Getting Started: gettings-started.md
   - Commands:
       - Overview: commands/index.md
       - Device Commands: commands/device.md

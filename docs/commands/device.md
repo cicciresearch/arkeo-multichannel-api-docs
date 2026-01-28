@@ -11,6 +11,7 @@ Set the JSON configuration string for the active channel. See [The JSON settings
 ``` json
 {
   "command": "SetChannelSettings",
+  "indices":[0,1,2],
   "parameter": {
     "settings": "{... JSON settings string ...}"
   }
@@ -59,7 +60,7 @@ Start the measurement process.
 
 **Example Request**
 ``` json
-{"command": "StartChannel"}
+{"command": "StartMeasurement"}
 ```
   **Example Response**
 ```json
@@ -182,16 +183,27 @@ Retrieve the current state of the selected channels. See [The JSON state string]
 ---
 ### **GetLatestJV**
 **Description**
-Retrieve the voltage and current values of the latest JV measurement.
+Retrieve the voltage and current values of the latest JV measurement as an array of JSON object.
+See: [`JV JSON object`](../jsons/jv-json.md)
 
 **Example Request**
 ``` json
-{"command": "GetLatestJV" }
+{"command": "GetLatestJV", "indices":[0,1,2]}
 ```
 **Example Response**
+``` json
+{
+  "status":"ok",
+  "channels":[
+    { ... JV JSON object 1 ... },
+    { ... JV JSON object 2 ... },
+    ...
+  ]
+}
 
-[`JV JSON object`](../jsons/jv-json.md)
 
+
+```
 ---
 ### **GetIV**
 **Description**

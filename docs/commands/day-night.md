@@ -2,6 +2,8 @@ The following commands are related to the global Day-Night cycling.
 
 **Response root:** `day_night`
 
+---
+
 ### **GetGlobalDayNight**
 **Description**
 Returns the global day-night cycling values and settings

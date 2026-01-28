@@ -2,6 +2,8 @@ The following commands are related to the sensors.
 
 **Response root:** `sensors`
 
+---
+
 ### **GetSensorsInfo**
 **Description**
 Retrieve sensor configuration (JSON with channels, names, types, units, and sensor-specific settings). See: [Sensor JSON String](../jsons/sensor-json.md) for more details.
