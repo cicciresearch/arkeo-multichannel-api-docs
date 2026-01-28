@@ -17,13 +17,17 @@ Below is an example of a state string.
 
 **Description**
 
+| **Parameter** | **Description**  				| **Example** | **Data Type** |
+| ------------- | ----------------------------- | ----------- | ------------- |
+| index         | Channel index 				| 0           | Integer       |
+| enable        | If channel is enabled 		| true        | Boolean       |
+| user          | Name of the user  			| User        | String        |
+| device        | Name of the device  			| Sample      | String        |
+| measurement   | State of the Measurement  	| jv[^1]      | String        |
+| direction     | Current direction of the JV 	| forward[^2] | String        |
+| state         | Current state of the channel	| running[^3] | String 		  |
 
-| **Parameter** | **Description**  | **Example** | **Data Type** |
-| ------------- | ------------------------- | ----------- | ------------- |
-| index         | Channel index | 0           | Integer       |
-| enable        | If channel is enabled | true        | Boolean       |
-| user          | Name of the user  | User        | String        |
-| device        | Name of the device  | Sample        | String        |
-| masurement    | State of the Measurement  | jv          | String        |
-| direction     | Current direction of the JV | forward     | String        |
-| state         | Current state of the channel<br>- idle<br>- ready to start<br>- running<br>- stopped<br>- error | running  | String |
+
+[^1]: Options: `jv`, `tracking`
+[^2]: Options: `forward`, `reverse`
+[^3]: Options: `idle`, `ready to start`, `running`, `stopped`, `error`

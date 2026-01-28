@@ -5,7 +5,7 @@ The following commands are related to the global Day-Night cycling.
 ---
 
 ### **GetGlobalDayNight**
-**Description**
+**Description**  
 Returns the global day-night cycling values and settings
 
 **Example Request**
@@ -37,7 +37,7 @@ Returns the global day-night cycling values and settings
 
 ---
 ### **SetGlobalDayNight**
-**Description**
+**Description**  
 Set the global day-night cycling settings.
 
 **Example Request**

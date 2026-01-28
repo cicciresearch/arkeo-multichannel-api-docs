@@ -20,8 +20,8 @@ Below is an example of a channel settings string.
     "Step (mV)":20,
     "ScanRate (mV/s)":200,
     "VocDetect":true,
-    "Overvoltage (%)":0,
-    "ScanOrder":"RV then FW"
+    "Overvoltage (%)":10,
+    "ScanOrder":"FW then RV"
   },
   "Tracking":{
     "TrackEnable":true,
@@ -35,9 +35,7 @@ Below is an example of a channel settings string.
   "Cell":{
     "Type":"Cell",
     "Area (cm2)":1,
-    "NrCells":1,
-    "NrW cells":1,
-    "W-cellArea (cm2)":1
+    "NrCells":1
   },
   "Day-Night":{
     "Use Global":false,
@@ -90,11 +88,12 @@ The following sections provides details of each parameter.
 | ScanRate (mV/s) | Rate at which voltage is applied | 100         | mV/s     | float    |
 | VocDetect       | Enable open-circuit detection    | true        | —        | boolean  |
 | ScanOrder²      | Order of scanning                | FW then RV  | —        | string   |
+
 ??? note "² ScanOrder enum"
-    - `0`: FW then RV  
-    - `1`: RV then FW  
-    - `2`: Forward only  
-    - `3`: Reverse only  
+    FW then RV  
+    RV then FW  
+    Forward only  
+    Reverse only  
 
 ### **Tracking** (object)
 
@@ -110,20 +109,18 @@ The following sections provides details of each parameter.
 | TestDuration.Value | Duration of tracking test         | 100         | —        | float    |
 | TestDuration.Unit⁴ | Unit for test duration            | hours       | —        | string   |
 
-??? note "³ Tracking Algorithm enum"
-    - `0`: Open circuit  
-    - `1`: Short circuit  
-    - `2`: MPPT  
-    - `3`: MPPT-Stab  
-    - `4`: MPPT INC  
-    - `5`: Fixed Voltage  
-    - `6`: Fixed Voltage (no track)  
-    - `7`: Fixed Current  
-    - `8`: JV  
-??? note "⁴ Time Unit enum"
-    - `0`: seconds  
-    - `1`: minutes  
-    - `2`: hours  
+??? note "³ Tracking Algorithm options"
+    MPPT  
+    Open circuit  
+    Short circuit  
+    Fixed Voltage  
+    Fixed Voltage (no track)  
+    Fixed Current  
+
+??? note "⁴ Time Unit options"
+    seconds  
+    minutes  
+    hours  
 
 ### **Cell** (object)
 
@@ -132,14 +129,12 @@ The following sections provides details of each parameter.
 | Type⁵            | Cell type           | Cell        | —        | string   |
 | Area (cm2)       | Area of the cell    | 1           | cm²      | float    |
 | NrCells          | Number of cells     | 1           | —        | integer  |
-| NrW cells        | Number of W-cells   | 1           | —        | integer  |
-| W-cellArea (cm2) | Area of each W-cell | 1           | cm²      | float    |
 
-??? note "⁵ Cell Type enum"
-    - `0`: Cell  
-    - `1`: Parallel Module  
-    - `2`: Z Module  
-    - `3`: W Module   
+??? note "⁵ Cell Type options"
+    Cell  
+    Parallel Module  
+    Z Module  
+    W Module   
 
 
 ### **Day-Night** (object)

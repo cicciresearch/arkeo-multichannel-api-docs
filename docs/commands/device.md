@@ -3,8 +3,9 @@ The following commands affect the SMU channels.
 **Response root:** `channels`
 
 ---
+
 ### **SetChannelSettings**
-**Description**
+**Description**  
 Set the JSON configuration string for the active channel. See [The JSON settings string](../jsons/settings-json.md) for more details.
 
 **Example Request**
@@ -32,7 +33,7 @@ Set the JSON configuration string for the active channel. See [The JSON settings
 
 ---
 ### **GetChannelSettings**
-**Description**
+**Description**  
 Retrieve the JSON configuration string of the active channel. See [The JSON settings string](../jsons/settings-json.md) for more details.
 
 **Example Request**
@@ -53,7 +54,7 @@ Retrieve the JSON configuration string of the active channel. See [The JSON sett
 
 ---
 ### **StartMeasurement**
-**Description**
+**Description**  
 Start the measurement process.
 ???+ note
     This command should only be used once to start the measurement process. If a channel is configured while a measurement is running, it will start automatically
@@ -83,7 +84,7 @@ Start the measurement process.
 
 ---
 ### **StopChannel**
-**Description**
+**Description**  
 Stop the measurement process for the selected channels. 
 !!! note "Invalid command"
     If a channel is already stopped or is not enabled, no state change occurs. The `"result"` key will have the value `"ignored"`
@@ -112,7 +113,7 @@ Stop the measurement process for the selected channels.
 ---
 
 ### **ForceJV**
-**Description**
+**Description**  
 Force a JV measurement on the selected channels.
 
 **Example Request**
@@ -136,11 +137,11 @@ Force a JV measurement on the selected channels.
 }
 ```
 
-The ForceJV command is ignored if the channel is:
+The `ForceJV` command is ignored if the channel is:
 
-- not enabled
-- not running
-- already in JV
+- not enabled  
+- not running  
+- already in JV  
 
 In that case `"result"` will return `"ignored"`, with an additional `"reason"` key stating one of the above reasons.
 
@@ -163,7 +164,7 @@ In that case `"result"` will return `"ignored"`, with an additional `"reason"` k
 
 ---
 ### **GetChannelState**
-**Description**
+**Description**  
 Retrieve the current state of the selected channels. See [The JSON state string](../jsons/state-json.md) for more details.
 
 **Example Request**
@@ -182,7 +183,7 @@ Retrieve the current state of the selected channels. See [The JSON state string]
 
 ---
 ### **GetLatestJV**
-**Description**
+**Description**  
 Retrieve the voltage and current values of the latest JV measurement as an array of JSON object.
 See: [`JV JSON object`](../jsons/jv-json.md)
 
@@ -206,7 +207,7 @@ See: [`JV JSON object`](../jsons/jv-json.md)
 ```
 ---
 ### **GetIV**
-**Description**
+**Description**  
 Retrieve the live voltage and current values of all channels.
 
 **Example Request**
@@ -235,7 +236,7 @@ Retrieve the live voltage and current values of all channels.
 
 ---
 ### **SetDeviceEnvironment**
-**Description**
+**Description**  
 Associate an environment to a device.
 
 **Example Request**

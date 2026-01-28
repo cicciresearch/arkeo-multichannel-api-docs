@@ -9,10 +9,12 @@ theme:
     - navigation.top
     - search.highlight
     - search.suggest
+    - content.footnote.tooltips
     - content.code.annotate
     - content.code.copy
+    - content.image.zoom
+    - content.action.copy
     - content.icons
-
 
 markdown_extensions:
   - toc:
@@ -22,12 +24,13 @@ markdown_extensions:
       anchor_linenums: false
       linenums: false
       guess_lang: false
-  - pymdownx.inlinehilite
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - footnotes
+  - pymdownx.inlinehilite
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:

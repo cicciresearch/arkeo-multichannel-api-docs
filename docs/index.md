@@ -50,7 +50,7 @@ If you are new to the API, follow this recommended path:
 The API is organized around **domains**, each with a clear responsibility and response structure:
 
 | Domain | Purpose |
-|------|--------|
+|--------|---------|
 | Device | Measurement channels and electrical control |
 | Sensors | Physical and virtual sensors |
 | Environments | Logical grouping of sensors |
