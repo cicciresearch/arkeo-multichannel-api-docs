@@ -781,6 +781,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#v050" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.5.0
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -876,6 +885,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#v050" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.5.0
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -897,24 +915,32 @@
 <h3 id="v01">v0.1<a class="headerlink" href="#v01" title="Permanent link">&para;</a></h3>
 <p>Initial version</p>
 <h3 id="v02">v0.2<a class="headerlink" href="#v02" title="Permanent link">&para;</a></h3>
-<p>Added ForceJV and GetChannelState</p>
+<p>Added <code>ForceJV</code> and <code>GetChannelState</code></p>
 <h3 id="v03">v0.3<a class="headerlink" href="#v03" title="Permanent link">&para;</a></h3>
-<p>Added GetLatestJV, GetIV and GetSensors</p>
+<p>Added <code>GetLatestJV</code>, <code>GetIV</code> and <code>GetSensors</code></p>
 <h3 id="v04">v0.4<a class="headerlink" href="#v04" title="Permanent link">&para;</a></h3>
 <p>Reorganized the settings JSON and clarified the documentation<br />
 Added JSON schema validation</p>
 <h3 id="v041">v0.4.1<a class="headerlink" href="#v041" title="Permanent link">&para;</a></h3>
 <p>Now allows multiple connections in parallel<br />
-Added GetSensorsInfo command<br />
-GetSensors now sends physical values instead of raw voltages<br />
-GetSensors no longer sends all sensor channels, but only configured channels<br />
+Added <code>GetSensorsInfo</code> command<br />
+<code>GetSensors</code> now sends physical values instead of raw voltages<br />
+<code>GetSensors</code> no longer sends all sensor channels, but only configured channels<br />
 Index field in the settings JSON changed from string to integer</p>
 <h3 id="v042">v0.4.2<a class="headerlink" href="#v042" title="Permanent link">&para;</a></h3>
-<p>Added GetEnvironments<br />
-Added SetChannelEnvironment</p>
+<p>Added <code>GetEnvironments</code><br />
+Added <code>SetChannelEnvironment</code></p>
 <h3 id="v043">v0.4.3<a class="headerlink" href="#v043" title="Permanent link">&para;</a></h3>
-<p>Added Day-Night object to json settings<br />
-Added GetGlobalDayNight and SetGlobalDayNight</p>
+<p>Added <code>Day-Night</code> object to json settings<br />
+Added <code>GetGlobalDayNight</code> and <code>SetGlobalDayNight</code></p>
+<h3 id="v050">v0.5.0<a class="headerlink" href="#v050" title="Permanent link">&para;</a></h3>
+<p>New response protocol. Now follows a consistent structure.<br />
+Device commands now include an <code>indices</code> fields to select channels<br />
+Removed <code>SetActiveChannel</code><br />
+Removed <code>GetActiveChannel</code><br />
+Renamed <code>StartChannel</code> to <code>StartMeasurement</code><br />
+Renamed <code>GetSensor</code> to <code>GetSensorData</code><br />
+Renamed <code>SetChannelEnvironment</code> to <code>SetDeviceEnvironment</code>  </p>
 
 
 
@@ -969,7 +995,7 @@ Added GetGlobalDayNight and SetGlobalDayNight</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy", "content.icons"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

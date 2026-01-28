@@ -936,7 +936,7 @@
 <p><strong>Response root:</strong> <code>channels</code></p>
 <hr />
 <h3 id="setchannelsettings"><strong>SetChannelSettings</strong><a class="headerlink" href="#setchannelsettings" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Set the JSON configuration string for the active channel. See <a href="../../jsons/settings-json/">The JSON settings string</a> for more details.</p>
 <p><strong>Example Request</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -957,7 +957,7 @@ Set the JSON configuration string for the active channel. See <a href="../../jso
 </code></pre></div>
 <hr />
 <h3 id="getchannelsettings"><strong>GetChannelSettings</strong><a class="headerlink" href="#getchannelsettings" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Retrieve the JSON configuration string of the active channel. See <a href="../../jsons/settings-json/">The JSON settings string</a> for more details.</p>
 <p><strong>Example Request</strong></p>
 <p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetChannelSettings&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;indices&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]}</span>
@@ -973,7 +973,7 @@ Retrieve the JSON configuration string of the active channel. See <a href="../..
 </code></pre></div></p>
 <hr />
 <h3 id="startmeasurement"><strong>StartMeasurement</strong><a class="headerlink" href="#startmeasurement" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Start the measurement process.</p>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -997,7 +997,7 @@ Start the measurement process.</p>
 </code></pre></div>
 <hr />
 <h3 id="stopchannel"><strong>StopChannel</strong><a class="headerlink" href="#stopchannel" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Stop the measurement process for the selected channels. </p>
 <div class="admonition note">
 <p class="admonition-title">Invalid command</p>
@@ -1022,7 +1022,7 @@ Stop the measurement process for the selected channels. </p>
 </code></pre></div></p>
 <hr />
 <h3 id="forcejv"><strong>ForceJV</strong><a class="headerlink" href="#forcejv" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Force a JV measurement on the selected channels.</p>
 <p><strong>Example Request</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ForceJV&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;indices&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]}</span>
@@ -1041,11 +1041,11 @@ Force a JV measurement on the selected channels.</p>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<p>The ForceJV command is ignored if the channel is:</p>
+<p>The <code>ForceJV</code> command is ignored if the channel is:</p>
 <ul>
-<li>not enabled</li>
-<li>not running</li>
-<li>already in JV</li>
+<li>not enabled  </li>
+<li>not running  </li>
+<li>already in JV  </li>
 </ul>
 <p>In that case <code>"result"</code> will return <code>"ignored"</code>, with an additional <code>"reason"</code> key stating one of the above reasons.</p>
 <p><strong>Example Response</strong>
@@ -1065,7 +1065,7 @@ Force a JV measurement on the selected channels.</p>
 </code></pre></div></p>
 <hr />
 <h3 id="getchannelstate"><strong>GetChannelState</strong><a class="headerlink" href="#getchannelstate" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Retrieve the current state of the selected channels. See <a href="../../jsons/state-json/">The JSON state string</a> for more details.</p>
 <p><strong>Example Request</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetChannelState&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;indices&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]}</span>
@@ -1080,7 +1080,7 @@ Retrieve the current state of the selected channels. See <a href="../../jsons/st
 </code></pre></div></p>
 <hr />
 <h3 id="getlatestjv"><strong>GetLatestJV</strong><a class="headerlink" href="#getlatestjv" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Retrieve the voltage and current values of the latest JV measurement as an array of JSON object.
 See: <a href="../../jsons/jv-json/"><code>JV JSON object</code></a></p>
 <p><strong>Example Request</strong>
@@ -1098,7 +1098,7 @@ See: <a href="../../jsons/jv-json/"><code>JV JSON object</code></a></p>
 </code></pre></div></p>
 <hr />
 <h3 id="getiv"><strong>GetIV</strong><a class="headerlink" href="#getiv" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Retrieve the live voltage and current values of all channels.</p>
 <p><strong>Example Request</strong></p>
 <p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetIV&quot;</span><span class="p">}</span>
@@ -1121,7 +1121,7 @@ Retrieve the live voltage and current values of all channels.</p>
 </code></pre></div>
 <hr />
 <h3 id="setdeviceenvironment"><strong>SetDeviceEnvironment</strong><a class="headerlink" href="#setdeviceenvironment" title="Permanent link">&para;</a></h3>
-<p><strong>Description</strong>
+<p><strong>Description</strong><br />
 Associate an environment to a device.</p>
 <p><strong>Example Request</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1196,7 +1196,7 @@ Associate an environment to a device.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy", "content.icons"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

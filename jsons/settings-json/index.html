@@ -948,8 +948,8 @@
 <span class="w">    </span><span class="nt">&quot;Step (mV)&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;ScanRate (mV/s)&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;VocDetect&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;Overvoltage (%)&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;ScanOrder&quot;</span><span class="p">:</span><span class="s2">&quot;RV then FW&quot;</span>
+<span class="w">    </span><span class="nt">&quot;Overvoltage (%)&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ScanOrder&quot;</span><span class="p">:</span><span class="s2">&quot;FW then RV&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;Tracking&quot;</span><span class="p">:{</span>
 <span class="w">    </span><span class="nt">&quot;TrackEnable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
@@ -963,9 +963,7 @@
 <span class="w">  </span><span class="nt">&quot;Cell&quot;</span><span class="p">:{</span>
 <span class="w">    </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="s2">&quot;Cell&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Area (cm2)&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;NrCells&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;NrW cells&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;W-cellArea (cm2)&quot;</span><span class="p">:</span><span class="mi">1</span>
+<span class="w">    </span><span class="nt">&quot;NrCells&quot;</span><span class="p">:</span><span class="mi">1</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;Day-Night&quot;</span><span class="p">:{</span>
 <span class="w">    </span><span class="nt">&quot;Use Global&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
@@ -1117,12 +1115,10 @@
 </table>
 <details class="note">
 <summary>² ScanOrder enum</summary>
-<ul>
-<li><code>0</code>: FW then RV  </li>
-<li><code>1</code>: RV then FW  </li>
-<li><code>2</code>: Forward only  </li>
-<li><code>3</code>: Reverse only  </li>
-</ul>
+<p>FW then RV<br />
+RV then FW<br />
+Forward only<br />
+Reverse only  </p>
 </details>
 <h3 id="tracking-object"><strong>Tracking</strong> (object)<a class="headerlink" href="#tracking-object" title="Permanent link">&para;</a></h3>
 <table>
@@ -1202,26 +1198,19 @@
 </tbody>
 </table>
 <details class="note">
-<summary>³ Tracking Algorithm enum</summary>
-<ul>
-<li><code>0</code>: Open circuit  </li>
-<li><code>1</code>: Short circuit  </li>
-<li><code>2</code>: MPPT  </li>
-<li><code>3</code>: MPPT-Stab  </li>
-<li><code>4</code>: MPPT INC  </li>
-<li><code>5</code>: Fixed Voltage  </li>
-<li><code>6</code>: Fixed Voltage (no track)  </li>
-<li><code>7</code>: Fixed Current  </li>
-<li><code>8</code>: JV  </li>
-</ul>
+<summary>³ Tracking Algorithm options</summary>
+<p>MPPT<br />
+Open circuit<br />
+Short circuit<br />
+Fixed Voltage<br />
+Fixed Voltage (no track)<br />
+Fixed Current  </p>
 </details>
 <details class="note">
-<summary>⁴ Time Unit enum</summary>
-<ul>
-<li><code>0</code>: seconds  </li>
-<li><code>1</code>: minutes  </li>
-<li><code>2</code>: hours  </li>
-</ul>
+<summary>⁴ Time Unit options</summary>
+<p>seconds<br />
+minutes<br />
+hours  </p>
 </details>
 <h3 id="cell-object"><strong>Cell</strong> (object)<a class="headerlink" href="#cell-object" title="Permanent link">&para;</a></h3>
 <table>
@@ -1256,30 +1245,14 @@
 <td>—</td>
 <td>integer</td>
 </tr>
-<tr>
-<td>NrW cells</td>
-<td>Number of W-cells</td>
-<td>1</td>
-<td>—</td>
-<td>integer</td>
-</tr>
-<tr>
-<td>W-cellArea (cm2)</td>
-<td>Area of each W-cell</td>
-<td>1</td>
-<td>cm²</td>
-<td>float</td>
-</tr>
 </tbody>
 </table>
 <details class="note">
-<summary>⁵ Cell Type enum</summary>
-<ul>
-<li><code>0</code>: Cell  </li>
-<li><code>1</code>: Parallel Module  </li>
-<li><code>2</code>: Z Module  </li>
-<li><code>3</code>: W Module   </li>
-</ul>
+<summary>⁵ Cell Type options</summary>
+<p>Cell<br />
+Parallel Module<br />
+Z Module<br />
+W Module   </p>
 </details>
 <h3 id="day-night-object"><strong>Day-Night</strong> (object)<a class="headerlink" href="#day-night-object" title="Permanent link">&para;</a></h3>
 <table>
@@ -1431,7 +1404,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy", "content.icons"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
