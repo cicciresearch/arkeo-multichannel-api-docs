@@ -39,3 +39,33 @@
 .md-typeset table td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
+
+/* Improve code contrast in dark mode */
+[data-md-color-scheme="slate"] {
+  --md-code-bg-color: #1e1e1e;
+  --md-code-fg-color: #e6e6e6;
+}
+
+/* Inline code */
+[data-md-color-scheme="slate"] code {
+  color: #80cbc4;
+}
+
+/* fix tables in darkmode */
+[data-md-color-scheme="slate"] table {
+  background-color: #1b1b1b;
+}
+
+[data-md-color-scheme="slate"] th {
+  background-color: #222;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] td {
+  border-color: #333;
+}
+
+
+[data-md-color-scheme="slate"] .md-typeset .admonition {
+  border-left: 4px solid var(--md-primary-fg-color);
+}

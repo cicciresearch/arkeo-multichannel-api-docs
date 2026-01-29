@@ -15,6 +15,29 @@ theme:
     - content.image.zoom
     - content.action.copy
     - content.icons
+  palette:
+    - media: "(prefers-color-scheme)"
+      primary: teal
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
 
 markdown_extensions:
   - toc:
@@ -24,6 +47,7 @@ markdown_extensions:
       anchor_linenums: false
       linenums: false
       guess_lang: false
+      use_pygments: true
   - admonition
   - pymdownx.details
   - pymdownx.superfences
