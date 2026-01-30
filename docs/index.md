@@ -72,16 +72,4 @@ It focuses on **clarity, consistency, and explicit behavior** rather than tutori
 
 ---
 
-## Looking for something specific?
 
-- Want to control measurements? → **Device commands**
-- Need sensor values? → **Sensor commands**
-- Working with automation? → **Day–Night**
-- Integrating metadata? → **JSON objects**
-
-Use the navigation menu on the left to jump directly to the relevant section.
-
----
-
-!!! note
-    This documentation describes the API behavior, not a specific client implementation.
