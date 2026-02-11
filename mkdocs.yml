@@ -64,7 +64,7 @@ markdown_extensions:
 nav:
   - Introduction: index.md
   - Protocol: protocol.md
-  - Getting Started: gettings-started.md
+  - Getting Started: getting-started.md
   - Commands:
       - Overview: commands/index.md
       - Device Commands: commands/device.md

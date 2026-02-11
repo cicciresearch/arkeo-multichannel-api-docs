@@ -1,8 +1,8 @@
 # JSON Settings string
 
-The settings of a channel are represented in a JSON string. When using [SetChannelSettings](../commands/device.md#setchannelsettings), this is value that the software expects. It is **not required** to provide the full JSON. Any fields not included in the JSON are ignored and those settings will not be affected.
+The settings of a channel are represented in a JSON string. When using [SetChannelSettings](../commands/device.md#setchannelsettings), this is value that the software expects. It is **not required** to provide the full JSON. Any fields not included in the JSON are ignored and those settings will not be affected. See [example](#examples), for simple settings string to perform basic measurements.
 
-Below is an example of a channel settings string. 
+Below is an example of the full channel settings string. 
 
 ```json
 {
@@ -160,3 +160,44 @@ The following sections provides details of each parameter.
 |           |                                |         |      |        |
 
 ---
+
+## Examples
+Below you can find a list of several example settings strings the system accepts. It is rarely necessary to send the full settings string, you can send only the settings that you want to change.
+
+### Turn on the channel
+```json 
+{"Enable":true}
+```
+
+### Change the user and device name
+```json 
+{
+  "User":"User",
+  "Device":"Sample",
+}
+```
+
+### Configure a single JV
+```json
+{
+  "Enable":true,
+  "User":"User",
+  "Device":"Sample",
+  "JV":{
+    "Vmin (V)":-0.1,
+    "Vmax (V)":1.2,
+    "Step (mV)":50,
+    "ScanRate (mV/s)":200,
+    "VocDetect":true,
+    "Overvoltage (%)":10,
+    "ScanOrder":"FW then RV"
+  },
+  "Tracking":{
+    "TrackEnable":false
+  },
+  "Cell":{
+    "Area (cm2)":0.91,
+  },
+  "Light":{"Irradiance":100,"Unit":"mW/cm2"}
+}
+```

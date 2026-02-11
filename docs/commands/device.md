@@ -14,7 +14,7 @@ Set the JSON configuration string for the active channel. See [The JSON settings
   "command": "SetChannelSettings",
   "indices":[0,1,2],
   "parameter": {
-    "settings": "{... JSON settings string ...}"
+    "settings": {... JSON settings string ...}
   }
 }
 ```

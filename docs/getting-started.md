@@ -14,7 +14,7 @@ The following sequence of commands can be used to perform a basic MPPT measureme
 ## Notes
 `#!json "GetIV"` can be periodically polled in the background. It doesn't affect any device channels. It can be used as a sanity check to ensure that ADCs are running.
 
-`#!json "SetChannelSettings"` Can be used both before and during a measurement to change the settings of a channel. Note that any fields not included in the JSON are ignored and those settings will not be affected.
+`#!json "SetChannelSettings"` Can be used both before and during a measurement to change the settings of a channel. Note that any fields not included in the JSON are ignored and those settings will not be affected. You can find some example settings strings [here](jsons/settings-json.md#examples)
 
 `#!json "GetChannelState"` Use this to monitor the measurement state of the device. If no measurements are running, after applying settings, the `"state"` field will be `"ready to start"`. Whereas, if a measurement was already running and another channel is added, the state will immediately go to `"running"`.
 
