@@ -960,7 +960,7 @@
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <p><code class="highlight"><span class="s2">&quot;GetIV&quot;</span></code> can be periodically polled in the background. It doesn't affect any device channels. It can be used as a sanity check to ensure that ADCs are running.</p>
-<p><code class="highlight"><span class="s2">&quot;SetChannelSettings&quot;</span></code> Can be used both before and during a measurement to change the settings of a channel. Note that any fields not included in the JSON are ignored and those settings will not be affected.</p>
+<p><code class="highlight"><span class="s2">&quot;SetChannelSettings&quot;</span></code> Can be used both before and during a measurement to change the settings of a channel. Note that any fields not included in the JSON are ignored and those settings will not be affected. You can find some example settings strings <a href="../jsons/settings-json/#examples">here</a></p>
 <p><code class="highlight"><span class="s2">&quot;GetChannelState&quot;</span></code> Use this to monitor the measurement state of the device. If no measurements are running, after applying settings, the <code>"state"</code> field will be <code>"ready to start"</code>. Whereas, if a measurement was already running and another channel is added, the state will immediately go to <code>"running"</code>.</p>
 <p><code class="highlight"><span class="s2">&quot;StartMeasurement&quot;</span></code> This command should only be called if no channels are currently running.</p>
 <p><code class="highlight"><span class="s2">&quot;GetChannelState&quot;</span></code> If tracking is not enabled, the channel will stop automatically after a JV</p>

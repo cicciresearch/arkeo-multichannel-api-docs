@@ -302,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gettings-started/" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   
@@ -737,6 +737,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turn-on-the-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turn on the channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-the-user-and-device-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change the user and device name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-single-jv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure a single JV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1101,6 +1151,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turn-on-the-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turn on the channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-the-user-and-device-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change the user and device name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-single-jv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure a single JV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1119,8 +1219,8 @@
 
 
 <h1 id="json-settings-string">JSON Settings string<a class="headerlink" href="#json-settings-string" title="Permanent link">&para;</a></h1>
-<p>The settings of a channel are represented in a JSON string. When using <a href="../../commands/device/#setchannelsettings">SetChannelSettings</a>, this is value that the software expects. It is <strong>not required</strong> to provide the full JSON. Any fields not included in the JSON are ignored and those settings will not be affected.</p>
-<p>Below is an example of a channel settings string. </p>
+<p>The settings of a channel are represented in a JSON string. When using <a href="../../commands/device/#setchannelsettings">SetChannelSettings</a>, this is value that the software expects. It is <strong>not required</strong> to provide the full JSON. Any fields not included in the JSON are ignored and those settings will not be affected. See <a href="#examples">example</a>, for simple settings string to perform basic measurements.</p>
+<p>Below is an example of the full channel settings string. </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;Enable&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="s2">&quot;User&quot;</span><span class="p">,</span>
@@ -1538,6 +1638,40 @@ W Module   </p>
 </tbody>
 </table>
 <hr />
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p>Below you can find a list of several example settings strings the system accepts. It is rarely necessary to send the full settings string, you can send only the settings that you want to change.</p>
+<h3 id="turn-on-the-channel">Turn on the channel<a class="headerlink" href="#turn-on-the-channel" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;Enable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">}</span>
+</code></pre></div>
+<h3 id="change-the-user-and-device-name">Change the user and device name<a class="headerlink" href="#change-the-user-and-device-name" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="s2">&quot;User&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Device&quot;</span><span class="p">:</span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="configure-a-single-jv">Configure a single JV<a class="headerlink" href="#configure-a-single-jv" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Enable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="s2">&quot;User&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Device&quot;</span><span class="p">:</span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;JV&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;Vmin (V)&quot;</span><span class="p">:</span><span class="mf">-0.1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Vmax (V)&quot;</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Step (mV)&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ScanRate (mV/s)&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;VocDetect&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Overvoltage (%)&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ScanOrder&quot;</span><span class="p">:</span><span class="s2">&quot;FW then RV&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;Tracking&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;TrackEnable&quot;</span><span class="p">:</span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;Cell&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;Area (cm2)&quot;</span><span class="p">:</span><span class="mf">0.91</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;Light&quot;</span><span class="p">:{</span><span class="nt">&quot;Irradiance&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="nt">&quot;Unit&quot;</span><span class="p">:</span><span class="s2">&quot;mW/cm2&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
