@@ -1,0 +1,33 @@
+name: Deploy documentation
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.x
+
+    - name: Install MkDocs
+      run: pip install mkdocs mkdocs-material
+
+    - name: Build documentation
+      run: mkdocs build
+
+    - name: Deploy to docs hub
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        external_repository: cicciresearch/docs-hub
+        publish_dir: ./site
+        destination_dir: arkeo-multichannel-api-docs
+        personal_token: ${{ secrets.DOCS_HUB_TOKEN }}
